@@ -11,8 +11,7 @@
   "typings": "index.d.ts",
   "scripts": {
     "dev": "tsc -w",
-    "prepublishOnly": "tsc",
-    "precommit": "pretty-quick --staged"
+    "prepublishOnly": "tsc"
   },
   "devDependencies": {
     "@hakkajs/cli": "latest",
