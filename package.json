@@ -1,0 +1,32 @@
+{
+		"name": "hakka-plugin-typed-css-modules",
+		"version": "1.0.0",
+		"main": "index.js",
+		"license": "MIT",
+		"description": "typed with css modules",
+		"keywords": [
+				"hakka-plugin-typed-css-modules",
+				"hakka-plugin"
+		],
+		"typings": "index.d.ts",
+		"scripts": {
+				"dev": "tsc -w",
+				"prepublishOnly": "tsc",
+				"precommit": "pretty-quick --staged"
+		},
+		"devDependencies": {
+				"typescript": "latest",
+				"@hakkajs/cli": "latest",
+				"@types/debug": "^0.0.30",
+				"@types/diff": "^3.2.2",
+				"@types/fs-extra": "^5.0.4",
+				"@types/handlebars": "^4.0.39",
+				"@types/inquirer": "^0.0.43",
+				"@types/node": "^10.11.2",
+				"@types/prettier": "^1.13.2",
+				"@types/swagger-parser": "^4.0.2",
+				"husky": "^1.0.1",
+				"prettier": "^1.14.3",
+				"pretty-quick": "^1.7.0"
+		}
+}
