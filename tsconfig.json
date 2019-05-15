@@ -23,7 +23,7 @@
 
     /* Strict Type-Checking Options */
     "strict": true /* Enable all strict type-checking options. */,
-    // "noImplicitAny": true,                 /* Raise error on expressions and declarations with an implied 'any' type. */
+    "noImplicitAny": false /* Raise error on expressions and declarations with an implied 'any' type. */,
     // "strictNullChecks": true,              /* Enable strict null checks. */
     // "strictFunctionTypes": true,           /* Enable strict checking of function types. */
     // "strictPropertyInitialization": true,  /* Enable strict checking of property initialization in classes. */
@@ -49,7 +49,7 @@
 
     /* Source Map Options */
     // "sourceRoot": "./",                    /* Specify the location where debugger should locate TypeScript files instead of source locations. */
-    // "mapRoot": "./",                       /* Specify the location where debugger should locate map files instead of generated locations. */
+    // "mapRoot": "./",
     "inlineSourceMap": true /* Emit a single file with source maps instead of having a separate file. */
     // "inlineSources": true,                 /* Emit the source alongside the sourcemaps within a single file; requires '--inlineSourceMap' or '--sourceMap' to be set. */
 
