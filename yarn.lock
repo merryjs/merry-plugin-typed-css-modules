@@ -18,9 +18,9 @@
     esutils "^2.0.2"
     js-tokens "^4.0.0"
 
-"@hakkajs/cli@latest":
+"@merryjs/cli@latest":
   version "2.0.1"
-  resolved "https://registry.yarnpkg.com/@hakkajs/cli/-/cli-2.0.1.tgz#2b492f0d6282fcd7f66713d7306b19b84ff2d5de"
+  resolved "https://registry.yarnpkg.com/@merryjs/cli/-/cli-2.0.1.tgz#2b492f0d6282fcd7f66713d7306b19b84ff2d5de"
   integrity sha512-oJluE95EWia94+wDr1N6NSViKE5U7Hn29AgGXn0JV2SYp+u4r5PDpqW+/07WS89niNgWDsp4FxP+uGJ2w70u9Q==
   dependencies:
     chalk "^2.3.1"

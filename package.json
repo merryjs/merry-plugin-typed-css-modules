@@ -1,12 +1,12 @@
 {
-  "name": "hakka-plugin-typed-css-modules",
+  "name": "merry-plugin-typed-css-modules",
   "version": "1.0.1",
   "main": "index.js",
   "license": "MIT",
   "description": "typed with css modules",
   "keywords": [
-    "hakka-plugin-typed-css-modules",
-    "hakka-plugin"
+    "merry-plugin-typed-css-modules",
+    "merry-plugin"
   ],
   "typings": "index.d.ts",
   "scripts": {
@@ -14,7 +14,7 @@
     "prepublishOnly": "tsc"
   },
   "devDependencies": {
-    "@hakkajs/cli": "latest",
+    "@merryjs/cli": "latest",
     "@types/css-modules-loader-core": "^1.1.0",
     "@types/debug": "^0.0.30",
     "@types/diff": "^3.2.2",

@@ -1,4 +1,4 @@
-import { Plugin } from '@hakkajs/cli/lib/plugin'
+import { Plugin } from '@merryjs/cli/lib/plugin'
 import chalk from 'chalk'
 import chokidar from 'chokidar'
 import glob from 'glob'
