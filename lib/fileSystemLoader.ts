@@ -51,8 +51,7 @@ export default class FileSystemLoader {
         try {
           fileRelativePath = require.resolve(newPath)
         } catch (e) {
-          // tslint:disable-next-line:no-console
-          console.log(e)
+          // no console
         }
       }
 

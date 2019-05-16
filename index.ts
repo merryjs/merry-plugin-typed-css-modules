@@ -1,5 +1,6 @@
 import { Plugin } from '@hakkajs/cli/lib/plugin'
 import chalk from 'chalk'
+import chokidar from 'chokidar'
 import glob from 'glob'
 import path from 'path'
 import { DtsCreator } from './lib/dtsCreator'
@@ -13,6 +14,7 @@ export interface TypedCssModulesOptions {
   pattern: string
   watch: boolean
   silent: string
+  camelCase: boolean
 }
 let creator
 let args: TypedCssModulesOptions
@@ -39,8 +41,9 @@ function writeFile(f) {
 export default (api: Plugin) => {
   api
     .command('typed-css-modules [name]')
+    .option('-C, --camelCase', 'Convert CSS class tokens to camelcase')
     .option('-P, --pattern [value]', 'filter path by pattern')
-    .option('-W, --watch', "Watch input directory's css files or pattern")
+    .option('-W, --watch', 'Watch input directory\'s css files or pattern')
     .option(
       '-S, --silent',
       'Silent output. Do not show "files written" or warning messages'
@@ -52,14 +55,19 @@ export default (api: Plugin) => {
         return
       }
       const rootDir = process.cwd()
-      const searchDir = './'
-      const filesPattern = path.join(searchDir, options.pattern || '**/*.css')
+      const searchDir = api.conf.dist
+      const filesPattern = path.join(searchDir, options.pattern || '**/*.+(css|scss|less)')
       creator = new DtsCreator({
         rootDir,
         searchDir,
+        camelCase: options.camelCase
       })
       if (options.watch) {
-        // TODO
+        // tslint:disable-next-line:no-console
+        console.log('Watching...')
+        const watcher = chokidar.watch([filesPattern.replace(/\\/g, '/')])
+        watcher.on('add', writeFile)
+        watcher.on('change', writeFile)
       } else {
         glob(filesPattern, null, (err, files) => {
           if (err) {
